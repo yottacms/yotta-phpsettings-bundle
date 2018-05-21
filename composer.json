@@ -1,0 +1,42 @@
+{
+    "name": "yottacms/yotta-phpsettings-bundle",
+    "description": "Yotta Php.ini settings bundle",
+    "keywords": [
+        "yottacms",
+        "symfony",
+        "dependencies",
+        "bundle",
+        "php.ini"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Hrischanovich",
+            "email": "info@asdf.by"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+		"symfony/dependency-injection": "^3.2",
+		"symfony/config": "^3.2",
+        "phpunit/phpunit": "^5.6.4",
+        "symfony/event-dispatcher": "^3.3",
+        "symfony/http-foundation": "^3.3",
+        "symfony/http-kernel": "^3.3",
+        "symfony/framework-bundle": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "YottaCms\\Bundle\\YottaPhpSettingsBundle\\": ""
+        },
+		"exclude-from-classmap": [
+            "Tests/"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
