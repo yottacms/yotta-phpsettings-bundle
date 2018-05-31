@@ -1,8 +1,0 @@
-services:
-    _defaults:
-        public: false
-        autoconfigure: true
-
-    YottaCms\Bundle\YottaPhpSettingsBundle\EventListener\PhpIniListener:
-        arguments: ['@service_container']
-        tags: [kernel.event_subscriber]
