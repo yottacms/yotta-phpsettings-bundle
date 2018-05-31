@@ -21,9 +21,11 @@ class YottaPhpSettingsBundle extends Bundle
      */
     public function setPhpSettings()
     {
-        foreach ((array)$this->container->getParameter('yotta_php_settings')['ini'] as $item) {
-            list($key, $value) = each($item);
-            ini_set($key, $value);
-        };
+        if ($this->container) {
+            foreach ((array)$this->container->getParameter('yotta_php_settings')['ini'] as $item) {
+                list($key, $value) = each($item);
+                ini_set($key, $value);
+            };
+        }
     }
 }
